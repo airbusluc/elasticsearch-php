@@ -54,8 +54,7 @@ class UpdateByQuery extends AbstractEndpoint
         $uri = "/$index/_update_by_query";
         if (isset($index) === true && isset($type) === true) {
             $uri = "/$index/$type/_update_by_query";
-        }
-        if (isset($index) === true) {
+        } elseif (isset($index) === true) {
             $uri = "/$index/_update_by_query";
         }
 
